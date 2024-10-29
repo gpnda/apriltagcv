@@ -79,6 +79,9 @@ ret, rvecs, tvecs = cv2.solvePnP(object_points, results[0].corners, camera_matri
 # project 3D points to image plane
 # Вот эту одну точку для начала - проецируем на 2D, используя rvecs, tvecs
 point_3d = np.array([0.5, 0.5, 0.5, 1]) # 3D-точка, только не понял зачем 4й элемент, все равно массив потом обрезается
+
+# Далее опять магическая магия. Сказано: В этом примере мы проецируем только одну точку. Если вам нужно проецировать 
+# несколько точек, просто передайте массив 3D-точек в cv2.projectPoints()
 point_2d, _ = cv2.projectPoints(
     point_3d[None, :3], 
     rvecs, 
