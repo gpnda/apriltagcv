@@ -21,6 +21,17 @@ print("[INFO] {} total AprilTags detected".format(len(results)))
 # print(results)
 
 
+
+
+
+
+
+
+
+
+
+
+
 # Здесь мы уже получили результаты (по 4 угла каждой метки apriltag, координаты на 2D изображении)
 # Все метки лежат в массиве results
 
